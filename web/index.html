@@ -1,10 +1,33 @@
 <!DOCTYPE html>
+<head>
+    <title>Page01</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
 <html>
    
     <body>
         <div>
-            <span id="a">huhu</span>
+            <span id="player1">玩家1：小明</span>
+            <div class="demo01">
+                <button>点我点我</button>
+            </div>
+            
         </div>
     </body>
-    <script src="./js/jq.js"></script>
+    <script>
+            'use strict';
+            document.addEventListener("DOMContentLoaded",function(){
+                function createParagraph() {
+                    var par = document.createElement("p");
+                    par.textContent  = "你点到我了";
+                    document.body.appendChild(par);
+                }
+                var buttons = document.querySelectorAll("button");
+                for (let i = 0; i < buttons.length; i++) {
+                    buttons[i].addEventListener("click",createParagraph);                 
+                }
+            });
+    </script>
+    <script src="./js/script.js"></script>
 </html>
