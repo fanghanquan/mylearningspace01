@@ -12,22 +12,22 @@
             <div class="demo01">
                 <button>点我点我</button>
             </div>
-            
+            <div class="form">
+                <h1>猜数字游戏</h1>
+                <p>我刚才随机选定了一个100以内的自然数。看你能否在 10 次以内猜中它。每次我都会告诉你所猜的结果是高了还是低了。</p>
+                <div class="resetParas">
+                    <label for="guessField">猜数字:</label>
+                    <input type="text" id="guessField" class="guessField">
+                    <input type="submit" value="确定" class="guessSumbit">
+                </div>
+                <div class="result">
+                    <p class="guesses"></p>
+                    <p class="lastResult"></p>
+                    <p class="lowOrHi"></p>
+                </div>
+            </div>
         </div>
     </body>
-    <script>
-            'use strict';
-            document.addEventListener("DOMContentLoaded",function(){
-                function createParagraph() {
-                    var par = document.createElement("p");
-                    par.textContent  = "你点到我了";
-                    document.body.appendChild(par);
-                }
-                var buttons = document.querySelectorAll("button");
-                for (let i = 0; i < buttons.length; i++) {
-                    buttons[i].addEventListener("click",createParagraph);                 
-                }
-            });
-    </script>
+
     <script src="./js/script.js"></script>
 </html>

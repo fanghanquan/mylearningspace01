@@ -21,3 +21,12 @@
     padding: 5px 5px;
     
 }
+
+.lastResult{
+    width: 150px;
+    text-align: center;
+}
+.lowOrHi{
+    width: 150px;
+    text-align: center;
+}
