@@ -7,6 +7,7 @@ function updateName() {
 }
 
 //点我点我
+/*
 document.addEventListener("DOMContentLoaded",function(){
     function createParagraph() {
         var par = document.createElement("p");
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded",function(){
         buttons[i].addEventListener("click",createParagraph);                 
     }
 });
+*/
 
 //猜数字游戏
 var randomNumber = Math.floor(Math.random()*100)+1;
