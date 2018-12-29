@@ -81,3 +81,16 @@ function resetGame(){
 
 }
 guessSumbit.addEventListener('click',checkGuess);
+
+
+//随机背景色
+
+var randomBgColor = document.querySelector('.randomBgColor');
+function randomNum(numb) {
+    return Math.floor(Math.random() * (numb + 1));
+} 
+
+randomBgColor.onclick = function () {
+    var randomColor = 'rgb(' + randomNum(255) + ',' + randomNum(255) + ',' + randomNum(255) + ')';
+    document.body.style.backgroundColor = randomColor;
+}
