@@ -1,0 +1,15 @@
+
+.pItem{
+    display: inline-block;
+    font-weight: bolder;
+    margin: 20px;
+}
+.newItem{
+    margin: 10px;
+}
+.addItem{
+    width: 90px;
+}
+.delButton{
+    margin: 20px;
+}
