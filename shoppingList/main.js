@@ -4,7 +4,7 @@ var shoppingList = document.querySelector('.shoppingList');
 addItem.onclick = function(){
     var item = newItem.value;
     if(!item){
-        alert('输入不能为空哦！');
+        alert('输入不能为空!!!');
         return false;
     }
     newItem.value = '';
