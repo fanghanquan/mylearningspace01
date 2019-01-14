@@ -20,4 +20,3 @@ addItem.onclick = function(){
     }
     newItem.focus();
 }
-console.log(2)
