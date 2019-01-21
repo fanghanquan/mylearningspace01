@@ -2,6 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
+    
     <ul>
       <li>
         <a href="https://vuejs.org" target="_blank">
@@ -53,8 +54,11 @@
         </a>
       </li>
     </ul>
+    <router-view></router-view>
   </div>
+  
 </template>
+
 
 <script>
 export default {
