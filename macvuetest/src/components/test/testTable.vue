@@ -1,29 +1,29 @@
 <template>
-    <div id="test">   
+    <div id="testTable">   
     <fieldset>
         <legend>
             我创建了一个表格
         </legend>
         <div class="form-group">
             <label>Name:</label>
-            <input type="text"/>
+            <input type="text" v-model="newPerson.name">
         </div>
         <div class="form-group">
             <label id="styleTest">Age:</label>
-            <input type="text">    
+            <input type="text" v-model="newPerson.age">    
         </div>   
         <div class="form-group">
             <label>Sex:</label>
-            <select>
+            <select v-model="newPerson.sex">
                 <option value="Male">Male</option>
                 <option value="Famale">Famale</option>
             </select>
         </div>
         <div class="form-group">
-            <button>Creat</button>   
+            <button @click="createPerson">Creat</button>   
         </div> 
     </fieldset>
-    <table>
+    <table >
         <thead>
             <tr>
                 <td>Name</td>
@@ -33,11 +33,11 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td><button>Delete</button></td>    
+            <tr v-for="(person, index) in people" :key="index">
+                <td>{{person.name}}</td>
+                <td>{{person.age}}</td>
+                <td>{{person.sex}}</td>
+                <td><button @click="deletePerson(index)">Delete</button></td>    
             </tr>    
         </tbody>
     </table>
@@ -45,21 +45,23 @@
     </div>
 </template>
 
-<!--<script>
+<script>
     export default{
-        name : 'test',
-        data: {
+        name : 'testTable',
+        data(){
             return{
                 newPerson:{
                     name:'',
                     age:'0',
                     sex:'Male',
                 },
-                people: [{
-                    name: 'Jack',
+                people: [
+                    {
+                        name: 'Jack',
                     age: 30,
                     sex: 'Male'
-                    }, {
+                    }, 
+                    {
                     name: 'Bill',
                     age: 26,
                     sex: 'Male'
@@ -73,10 +75,18 @@
                     sex: 'Male'
                 }]
             }
-        }            
+        },
+        methods: {
+            createPerson:function(){
+                this.people.push(this.newPerson);
+                this.newPerson = {name:'',age:0,sex:'Male'};
+            },
+            deletePerson:function(index){
+                this.people.splice(index,1);
+            }
+        },            
     }
-</script>  -->
-
+</script>
 
 <style>         
 .form-group{
@@ -99,9 +109,13 @@
 }
 table{
     width: 100%;
+    border-collapse: collapse;
+
 }
 thead td{
     background-color:mediumspringgreen;
+    border: 1.5px solid #2c3e50;
+
 }
 tbody td button{
     background-color:rgb(119, 228, 155);
@@ -113,7 +127,8 @@ tbody td button{
     font-size: 15px;
 }
 td{
-    width: 24%;
+    width: 25%;
     line-height: 36px;
+    border: 1px solid mediumspringgreen;
 }
 </style>

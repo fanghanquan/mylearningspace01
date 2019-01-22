@@ -14,4 +14,5 @@
   color: #2c3e50;
   margin-top: 60px;
 }
+fieldset{ padding: 0; margin: 0;}
 </style>
