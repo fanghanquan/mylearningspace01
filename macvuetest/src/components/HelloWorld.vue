@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
-    
+
     <ul>
       <li>
         <a href="https://vuejs.org" target="_blank">
@@ -20,7 +20,7 @@
         </a>
       </li>
       <li>
-        <a href="https://twitter.com/vuejs" target="_blank">  
+        <a href="https://twitter.com/vuejs" target="_blank">
           Twitter
         </a>
       </li>
@@ -54,9 +54,11 @@
         </a>
       </li>
     </ul>
-    <router-view></router-view>
+    <p>
+      <router-link to="/testTable">去testTable页面</router-link>
+    </p>
   </div>
-  
+
 </template>
 
 
