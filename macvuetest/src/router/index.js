@@ -15,7 +15,6 @@ export default new Router({
       path:"/testTable",
       name:"testTable",
       component:test,
-    
     }
   ]
 })
